@@ -1,6 +1,7 @@
 # Shennon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+## Demo
+[Demo](https://shannon-fortune-teller.netlify.com/)
 
 ## Development server
 
