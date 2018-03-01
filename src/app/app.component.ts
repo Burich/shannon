@@ -45,6 +45,14 @@ export class AppComponent implements OnInit {
     this.lastAnswers = [new Answer(1, 2), new Answer(0, 2), new Answer(1, 2)];
   }
 
+  onKeyPress(event: KeyboardEvent): void {
+    if (event.key === '0') {
+      this.say(0);
+    } else if (event.key === '1') {
+      this.say(1);
+    }
+  }
+
   say(n: 0 | 1) {
     const isRight = n === this.answer;
     this.lastResult = isRight ? 'Right' : 'Wrong';

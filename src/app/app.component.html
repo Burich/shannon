@@ -1,15 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h2>
-    Shannon fortune teller
-</h2>
-<div>
-    Last result: {{lastResult}}
+<div on-keypress="onKeyPress($event)">
+    <h2>
+        Shannon fortune teller
+    </h2>
+    <div>
+        Last result: {{lastResult}}
+    </div>
+    <div>
+        Score: {{totalRight/totalAnswers}}
+    </div>
+    <button (click)="say(0)">0</button>
+    <button (click)="say(1)">1</button>
+    <span class="hidden">{{answer}}</span>
+    <h2>Last results:</h2>
+    <div *ngFor="let item of visualLog">{{item}}</div>
 </div>
-<div>
-    Score: {{totalRight/totalAnswers}}
-</div>
-<button (click)="say(0)">0</button>
-<button (click)="say(1)">1</button>
-<span class="hidden">{{answer}}</span>
-<h2>Last results:</h2>
-<div *ngFor="let item of visualLog">{{item}}</div>
