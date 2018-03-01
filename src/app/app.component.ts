@@ -57,7 +57,8 @@ export class AppComponent implements OnInit {
     if (this.log.length > 20) {
       this.log = this.log.splice(1);
     }
-    this.visualLog = this.log.reverse();
+    this.visualLog = [...this.log];
+    this.visualLog.reverse();
 
     this.updateTable(n);
     this.addAnswer(n);
